@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from djangoStudying import views
+from djangoStudying.page import root
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("top/", views.index, name='index'),
+    path("", root.index, name='index page'),
 ]
