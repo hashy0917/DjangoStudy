@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from djangoStudying import views
-from djangoStudying.page import root
+from djangoStudying.page import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("top/", views.index, name='index'),
-    path("", root.index, name='index page'),
+    path("top/", views.top, name='top page'),
+    path("", views.index, name='index page'),
 ]
